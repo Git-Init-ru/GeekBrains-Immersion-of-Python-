@@ -1,0 +1,6 @@
+count = 0
+for c in list1:
+    for j in list2:
+        if c == j:
+            count += 1
+print(f'Количество совпадающих чисел: {count}')
