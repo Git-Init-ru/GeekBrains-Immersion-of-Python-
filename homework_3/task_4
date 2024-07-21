@@ -1,0 +1,5 @@
+lst_2 = []
+for c in lst:
+    if lst.count(c) > 1 and c not in lst_2:
+        lst_2.append(c)
+print(lst_2)
