@@ -1,0 +1,14 @@
+#num = 225
+HEX = 16
+
+def get_hex(number):
+    digits = '0123456789abcdef'
+    hex_number = ""
+    while number != 0:
+        hex_number = digits[number % HEX] + hex_number
+        number = number // HEX
+    return hex_number
+
+
+print(f"Шестнадцатеричное представление числа: {(get_hex(num).upper())}")
+print(f"Проверка результата: {hex(num)}")
