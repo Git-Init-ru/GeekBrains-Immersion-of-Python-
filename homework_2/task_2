@@ -1,0 +1,11 @@
+from fractions import Fraction
+
+#frac1 = "1/2"
+#frac2 = "1/3"
+
+frac1 = Fraction(frac1)
+frac2 = Fraction(frac2)
+print(f"Сумма дробей: {frac1+frac2}")
+print(f"Произведение дробей: {frac2*frac1}")
+print(f"Сумма дробей: {frac1+frac2}")
+print(f"Произведение дробей: {frac2*frac1}")
