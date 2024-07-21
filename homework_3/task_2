@@ -1,0 +1,14 @@
+def isDigit(x):
+    try:
+        float(x)
+        return True
+    except ValueError:
+        return False
+st = set()
+text = text.replace("'", " ")
+text = [c.rstrip(',.!?:;').lower() for c in text.split() if not isDigit(c)]
+for c in text:
+    st.add((c, text.count(c)))
+st = list(st)
+st = sorted(st, key=lambda x: x[0], reverse=True)
+print(sorted(st, key=lambda x: x[1], reverse=True))
