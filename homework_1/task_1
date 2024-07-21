@@ -1,0 +1,21 @@
+def check_triangle(a, b, c,):
+    flag = False
+    if a + b > c and c + b > a and a + c > b:
+        print("Треугольник существует")
+        flag = True
+
+    else:
+        print("Треугольник не существует")
+        flag = False
+     
+
+    if  flag:
+        if a == b == c:
+            print("Треугольник равносторонний")
+        elif a == b and a != c:
+            print("Треугольник равнобедренный")
+        else:
+            print("Треугольник разносторонний")
+
+            
+check_triangle(a, b, c)
