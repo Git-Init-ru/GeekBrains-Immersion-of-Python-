@@ -1,0 +1,27 @@
+#items = {
+#    "ключи": 0.3,
+#    "кошелек": 0.2,
+#    "телефон": 0.5,
+#    "зажигалка": 0.1
+#}
+#max_weight = 1.0
+
+#Variant_1:
+items = dict(sorted(items.items(), key= lambda item: item[1]))
+backpack = {}
+for k, v in items.items():
+    if v <= max_weight:
+        max_weight -= v
+        backpack[k] = v
+
+#Variant_2:
+total_weight = 0
+backpack = {}
+items = dict(sorted(items.items(), key=lambda item: item[1]))
+mx = min(items.values())
+for k, v in items.items():
+   if mx == max_weight:
+       backpack= {k:v for k, v in items.items() if v== min(items.values())}
+   elif total_weight + items[k]  <= max_weight:
+       total_weight += items[k]
+       backpack[k] = v
